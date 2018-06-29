@@ -1,0 +1,71 @@
+[{
+  "id": 1,
+  "first_name": "Sherm",
+  "last_name": "Duxbury",
+  "email": "sduxbury0@php.net",
+  "gender": "Male",
+  "ip_address": "195.108.97.43"
+}, {
+  "id": 2,
+  "first_name": "Ty",
+  "last_name": "Petersen",
+  "email": "tpetersen1@gizmodo.com",
+  "gender": "Male",
+  "ip_address": "90.127.119.71"
+}, {
+  "id": 3,
+  "first_name": "Dewey",
+  "last_name": "Faivre",
+  "email": "dfaivre2@indiegogo.com",
+  "gender": "Male",
+  "ip_address": "79.233.18.35"
+}, {
+  "id": 4,
+  "first_name": "Jard",
+  "last_name": "Tatem",
+  "email": "jtatem3@admin.ch",
+  "gender": "Male",
+  "ip_address": "110.174.149.61"
+}, {
+  "id": 5,
+  "first_name": "Roseann",
+  "last_name": "Hyndson",
+  "email": "rhyndson4@wufoo.com",
+  "gender": "Female",
+  "ip_address": "243.50.115.148"
+}, {
+  "id": 6,
+  "first_name": "Charisse",
+  "last_name": "Cusick",
+  "email": "ccusick5@si.edu",
+  "gender": "Female",
+  "ip_address": "77.219.55.144"
+}, {
+  "id": 7,
+  "first_name": "Ernie",
+  "last_name": "Annion",
+  "email": "eannion6@rakuten.co.jp",
+  "gender": "Male",
+  "ip_address": "109.191.176.47"
+}, {
+  "id": 8,
+  "first_name": "Colver",
+  "last_name": "Sherbrooke",
+  "email": "csherbrooke7@economist.com",
+  "gender": "Male",
+  "ip_address": "14.50.3.233"
+}, {
+  "id": 9,
+  "first_name": "Avrom",
+  "last_name": "Godain",
+  "email": "agodain8@slate.com",
+  "gender": "Male",
+  "ip_address": "236.173.175.200"
+}, {
+  "id": 10,
+  "first_name": "Marlie",
+  "last_name": "Firsby",
+  "email": "mfirsby9@homestead.com",
+  "gender": "Female",
+  "ip_address": "39.40.5.39"
+}]

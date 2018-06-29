@@ -1,0 +1,24 @@
+<html>
+<head>
+    <title>DOM demo</title>
+</head>
+<body>
+    <div>
+        <div id="message">Some message</div>
+    </div>
+    <div>
+        <button onclick="reverse()">Reverse message</button>
+    </div>
+
+    <script>
+        function reverse(){
+            console.log('reverse invoked...')
+            // var message = document.getElementsByTagName('p')[0].innerText
+            var message = document.getElementById('message').innerText
+            var reversedMessage = message.split('').reverse().join('')
+            console.log(reversedMessage)
+            document.getElementById('message').innerHTML = "<h2>" +  reversedMessage + "</h2>"
+        }
+    </script>
+</body>
+</html>

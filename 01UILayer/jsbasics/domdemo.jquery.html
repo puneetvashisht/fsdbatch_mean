@@ -1,0 +1,70 @@
+<html>
+<head>
+    <title>DOM demo</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css"/>
+    <style>
+        .red {
+            color: red;
+        }
+        #message{
+            color: green;
+        }
+        div {
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div>
+        <div id="message">Some message</div>
+        <div class="red">Some message</div>
+        <p class="red">Some message</p>
+    </div>
+    <div>
+        <table id="datatable">
+
+        </table>
+    </div>
+    <div>
+        <button onclick="reverse()">Reverse message</button>
+        <button onclick="loadData()">Load Data</button>
+
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        function reverse(){
+            console.log('reverse invoked...')
+            // var message = document.getElementsByTagName('p')[0].innerText
+            // var message = document.getElementById('message').innerText
+            var message = $('#message').text();
+            var reversedMessage = message.split('').reverse().join('')
+            console.log(reversedMessage)
+            // document.getElementById('message').innerHTML = "<h2>" +  reversedMessage + "</h2>"
+            $('#message').html("<h2>" +  reversedMessage + "</h2>")
+        }
+
+
+        function loadData(){
+            $.ajax({
+                url: 'dummy.json',
+                method: 'GET'
+            }).then((res)=> {
+                console.log(res)
+                res.forEach(element => {
+                    var row = `<tr>
+                        <td>${element.first_name}</td>
+                        <td>${element.last_name}</td>
+                        <td>${element.email}</td>
+                        <td>${element.gender}</td>
+                        <td>${element.ip_address}</td>
+                    </tr>
+                    `
+                    $('#datatable').append(row)
+                });
+                // $('#message').html(JSON.stringify(res))
+            })
+        }
+    </script>
+</body>
+</html>

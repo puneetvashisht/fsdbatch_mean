@@ -7,3 +7,4 @@
         objects
         asynch functions
         built in types: string, date, arrays
+        DOM manipulation
