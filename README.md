@@ -8,6 +8,8 @@
         asynch functions
         built in types: string, date, arrays
         DOM manipulation
+        Callbacks vs Promises
+        ES6
     JQuery
         Library for already available function
         Shortens the lines of code (Ajax)
