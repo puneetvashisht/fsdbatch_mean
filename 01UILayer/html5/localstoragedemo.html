@@ -1,6 +1,15 @@
 <html>
 <head>
     <title>Test</title>
+    <style>
+        ul {
+            color: green
+        }
+
+        ul.redlist {
+            border: 1px solid red
+        }
+    </style>
 </head>
 <body onload="populateTodos()">
     <div>
@@ -10,6 +19,14 @@
         <ul id="mylist">
 
 
+        </ul>
+
+        <ul class="redlist">
+            <li>Test123</li>
+        </ul>
+
+        <ul class="redlist">
+                <li>Test234</li>
         </ul>
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>

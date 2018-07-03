@@ -15,3 +15,24 @@
         Shortens the lines of code (Ajax)
         Selectors match CSS selectors (#, . , combination)
         AJAX - Asynch Javascript and XML/JSON
+    HTML
+        HTML new elements -> html5test.com
+        Symantic elements -> nav, aside, section, header, footer
+        Application features
+            - Webstorage
+            - Application Cache
+            - Server Side Events
+            - Websockets
+            - Drag & drop
+
+    CSS 
+        Selectors in CSS, match selector is JQuery
+            #, for id
+            . for class
+            element for selcting an element
+    
+    Bootstrap
+
+    Angular
+
+    NodeJS
