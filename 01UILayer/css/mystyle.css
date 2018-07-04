@@ -1,0 +1,14 @@
+/* .bordergreen {
+    border-width: 5 10px;
+    border-style: dotted;
+    border-color: black;
+    padding-top: 50px;
+    padding-left: 50px
+} */
+div {
+    border: 1px solid black
+    
+}
+/* p.bordergreen{
+    margin-top: 36px
+} */

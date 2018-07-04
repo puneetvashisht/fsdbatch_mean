@@ -1,0 +1,65 @@
+<html>
+<head>
+    <title>Test</title>
+    <style>
+        ul {
+            color: green
+        }
+
+        ul.redlist {
+            border: 1px solid red
+        }
+
+        ul#mylist {
+            font-size: xx-large
+        }
+    </style>
+</head>
+<body onload="populateTodos()">
+    <div>
+        <input id="message" type="text">
+        <button onclick="test()">Test Local Storage</button>
+        <hr/>
+        <ul id="mylist">
+
+
+        </ul>
+
+        <ul class="redlist">
+            <li>Test123</li>
+        </ul>
+
+        <ul class="redlist">
+                <li>Test234</li>
+        </ul>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+
+        var todoArr= []
+
+        function populateTodos(){
+            var todos = localStorage.getItem('myTodos') || "[]"
+            console.log(typeof(todos));
+            todoArr = JSON.parse(todos)
+            todoArr.forEach(todo => {
+                var listItem = `<li>${todo}</li>`
+                $('#mylist').append(listItem);
+            });
+        }
+
+
+        function test(){
+            
+            var textValue = $('#message').val()
+            todoArr.push(textValue);
+            console.log('clicked..', textValue)
+            var listItem = `<li>${textValue}</li>`
+            $('#mylist').append(listItem);
+            localStorage.setItem('myTodos', JSON.stringify(todoArr));
+
+        }
+    
+    </script>
+</body>
+</html>
