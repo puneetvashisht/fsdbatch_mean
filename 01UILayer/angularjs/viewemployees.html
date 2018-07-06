@@ -1,0 +1,37 @@
+<html>
+<head>
+    <title>Calc with JQuery</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/foundation/6.4.3/css/foundation.css"/>
+</head>
+<body ng-app="calcApp" ng-controller="AppCtrl">
+    <div>
+        <input type="search" ng-model="search.first_name" placeholder="Search by Name"/>
+        <input type="search" ng-model="search.email" placeholder="Search by Name"/>
+        <input type="search" ng-model="search.$" placeholder="Search All"/>
+        <table>
+            <tr ng-repeat="employee in employees | filter:search">
+                <td>{{employee.id}}</td>
+                <td>{{employee.first_name}}</td>
+                <td>{{employee.last_name}}</td>
+                <td>{{employee.email}}</td>
+                <td>{{employee.gender}}</td>
+                <td>{{employee.ip_address}}</td>
+            </tr>
+        </table>
+      
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script>
+        angular.module('calcApp', [])
+        .controller('AppCtrl', function($scope, $http){
+            $http({
+                url: 'dummy.json',
+                method: 'GET'
+            }).then((res)=> {
+                console.log(res.data)
+                $scope.employees = res.data
+            })
+        })
+    </script>
+</body>
+</html>

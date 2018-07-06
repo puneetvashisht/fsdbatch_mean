@@ -1,0 +1,34 @@
+<html>
+<head>
+    <title>Calc with JQuery</title>
+</head>
+<body>
+    <div>
+        <input id="oper1" type="number" placeholder="Operand 1" />
+        <input id="oper2" type="number" placeholder="Operand 2" />
+        <button onclick="add()"> + </button>
+        <button onclick="mul()"> * </button>
+        <div id="result">
+
+        </div>
+
+    </div>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script>
+        function add(){
+            var oper1 = $('#oper1').val()
+            var oper2 = $('#oper2').val()
+            var result = parseInt(oper1) + parseInt(oper2)
+            $('#result').text(result)
+
+        }
+        function mul(){
+            var oper1 = $('#oper1').val()
+            var oper2 = $('#oper2').val()
+            var result = oper1 * oper2
+            $('#result').text(result)
+
+        }
+    </script>
+</body>
+</html>

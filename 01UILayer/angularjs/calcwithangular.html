@@ -1,0 +1,27 @@
+<html>
+<head>
+    <title>Calc with JQuery</title>
+</head>
+<body ng-app="calcApp">
+    <div>
+        <input ng-model="oper1" type="number" placeholder="Operand 1" />
+        <input ng-model="oper2" type="number" placeholder="Operand 2" />
+        <button ng-click="add()"> + </button>
+        <div>
+            {{result}}
+        </div>
+
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.2/angular.min.js"></script>
+    <script>
+        angular.module('calcApp', [])
+        .run(function($rootScope){
+            console.log('run')
+            $rootScope.add = function(){
+                $rootScope.result =  $rootScope.oper1 +  $rootScope.oper2
+            }
+        })
+    
+    </script>
+</body>
+</html>
