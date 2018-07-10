@@ -2,14 +2,11 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
 import { AppComponent } from './app.component';
-import { DropdownComponent } from './components/dropdown/dropdown.component';
-import { ButtonComponent } from './components/dropdown/button.component';
-
+import { BadgeComponent } from './badge.component';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    DropdownComponent, ButtonComponent
+    AppComponent, BadgeComponent
   ],
   imports: [
     BrowserModule

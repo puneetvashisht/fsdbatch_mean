@@ -1,0 +1,8 @@
+<div class="dropdown">
+  <app-button caption="Select Courses" (buttonClick)="toggleShow()"></app-button>
+  <div [class]="show?'dropdown-menu show':'dropdown-menu' " aria-labelledby="dropdownMenuButton">
+    <a class="dropdown-item" href="#">Action</a>
+    <a class="dropdown-item" href="#">Another action</a>
+    <a class="dropdown-item" href="#">Something else here</a>
+  </div>
+</div>

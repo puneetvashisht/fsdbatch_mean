@@ -35,4 +35,12 @@
 
     Angular
 
+        Setup - @angular/cli
+        Typescript
+        Creating components
+        Components & DataBindings
+            - {{}} --> Interpolation
+            - [] -> Input into the component
+            - () -> Event binding
+
     NodeJS
