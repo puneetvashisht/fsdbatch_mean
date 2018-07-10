@@ -8,5 +8,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
 
   title: string = 'My title';
+  courses: Array<string> = ['Angular', 'React', 'Ember']
+  pizzas: Array<string> = ['Cheese', 'Corn', 'Magaretta']
 
 }

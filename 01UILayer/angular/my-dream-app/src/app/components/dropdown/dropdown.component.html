@@ -1,8 +1,6 @@
 <div class="dropdown">
-  <app-button caption="Select Courses" (buttonClick)="toggleShow()"></app-button>
+  <app-button caption={{buttonCaption}} (buttonClick)="toggleShow()"></app-button>
   <div [class]="show?'dropdown-menu show':'dropdown-menu' " aria-labelledby="dropdownMenuButton">
-    <a class="dropdown-item" href="#">Action</a>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <a *ngFor="let course of courses" class="dropdown-item" href="#" (click)="selectCourse(course)">{{course}}</a>
   </div>
 </div>

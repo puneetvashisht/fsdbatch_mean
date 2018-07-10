@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 
 @Component({
   selector: 'app-dropdown',
@@ -7,6 +7,8 @@ import { Component, OnInit } from '@angular/core';
 export class DropdownComponent implements OnInit {
 
   show: boolean = false;
+  @Input('buttonCaption') buttonCaption: string = 'Select Courses!!'
+  @Input('listValues') courses: Array<string> = []
 
   constructor() { }
 
@@ -15,6 +17,12 @@ export class DropdownComponent implements OnInit {
 
   toggleShow(){
     this.show = !this.show
+  }
+
+  selectCourse(course: string){
+    console.log(course)
+    this.buttonCaption = course
+    this.show = false
   }
 
 }
