@@ -1,17 +1,18 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import {HttpModule} from '@angular/http'
 
 import { AppComponent } from './app.component';
-import { CardComponent } from './components/card.component';
-import { BadgeComponent } from './components/badge.component';
+import { DropdownComponent } from './components/dropdown/dropdown.component';
+import { ButtonComponent } from './components/dropdown/button.component';
+
 
 @NgModule({
   declarations: [
-    AppComponent, CardComponent, BadgeComponent
+    AppComponent,
+    DropdownComponent, ButtonComponent
   ],
   imports: [
-    BrowserModule, HttpModule
+    BrowserModule
   ],
   providers: [],
   bootstrap: [AppComponent]

@@ -1,0 +1,6 @@
+[
+    {"title": "Angular!", "summary":"Framework by google!!"},
+    {"title": "React!", "summary":"Library by facebook!!"},
+    {"title": "Ember!", "summary":"Another open source framework!!"},
+    {"title": "CanJS!", "summary":"JS is on the rise and most popular programming language today!!"}
+]

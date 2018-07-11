@@ -1,7 +1,9 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div>
-    <app-dropdown buttonCaption="Select Courses" [listValues]="courses"></app-dropdown>
-    <app-dropdown buttonCaption="Select Pizzas" [listValues]="pizzas"></app-dropdown>
+<div class="container">
+    <div class="row">
+            <app-card *ngFor="let course of courses" [title]="course.title" [summary]="course.summary"></app-card>
+    </div>
+ 
 </div>
 
 
