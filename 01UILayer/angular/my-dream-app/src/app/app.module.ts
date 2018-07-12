@@ -5,15 +5,18 @@ import {HttpModule} from '@angular/http'
 import { AppComponent } from './app.component';
 import { CardComponent } from './components/card.component';
 import { BadgeComponent } from './components/badge.component';
+import { TopCoursesComponent } from './components/topcourses.component';
+import { CoursesService } from './services/courses.service';
+import { LogService } from './services/log.service';
 
 @NgModule({
   declarations: [
-    AppComponent, CardComponent, BadgeComponent
+    AppComponent, CardComponent, BadgeComponent, TopCoursesComponent
   ],
   imports: [
     BrowserModule, HttpModule
   ],
-  providers: [],
+  providers: [CoursesService, LogService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

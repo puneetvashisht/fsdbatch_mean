@@ -1,8 +1,27 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
     <div class="row">
-            <app-card *ngFor="let course of courses" [title]="course.title" [summary]="course.summary"></app-card>
+            <div class="col-8 col-md-8">
+                <div class="row">
+                        <app-card *ngFor="let course of courses" [title]="course.title" [summary]="course.summary"></app-card>
+                </div>
+                
+            </div>
+            <div class="col-4 col-md-4">
+                <app-topcourses></app-topcourses>
+            </div>
+           
     </div>
+
+    <div class="row">
+        <button (click)="fetchLogs()">Fetch Logs</button>
+        <ul>
+            <li  *ngFor="let log of logs">
+                {{log}}
+            </li>
+        </ul>
+    </div>
+
  
 </div>
 
