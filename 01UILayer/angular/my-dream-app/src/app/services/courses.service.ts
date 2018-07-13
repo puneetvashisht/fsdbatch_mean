@@ -7,13 +7,16 @@ export class CoursesService {
     
     constructor(private http: Http) { }
 
+    baseUrl: string = 'http://localhost:3000/courses'
+
     fetchCourses(): Promise<any> {
-        return this.http.get('http://localhost:4200/assets/dummy.json').toPromise()
+        // return this.http.get(this.baseUrl).toPromise()
+        return this.http.get(this.baseUrl).toPromise()
         .then(res => res.json())  
     }
 
     addCourse(course: Course):Promise<any> {
-        return this.http.post('http://localhost:4200/assets/dummy.json', course).toPromise()
+        return this.http.post(this.baseUrl, course).toPromise()
         .then(res => res.json())  
     }
 

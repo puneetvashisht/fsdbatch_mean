@@ -8,10 +8,11 @@ import { BadgeComponent } from './components/badge.component';
 import { TopCoursesComponent } from './components/topcourses.component';
 import { CoursesService } from './services/courses.service';
 import { LogService } from './services/log.service';
+import { AddCourseComponent } from './components/addcourse.component';
 
 @NgModule({
   declarations: [
-    AppComponent, CardComponent, BadgeComponent, TopCoursesComponent
+    AppComponent, CardComponent, BadgeComponent, TopCoursesComponent, AddCourseComponent
   ],
   imports: [
     BrowserModule, HttpModule
