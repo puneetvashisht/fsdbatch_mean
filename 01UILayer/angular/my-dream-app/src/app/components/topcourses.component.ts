@@ -9,8 +9,14 @@ import { LogService } from '../services/log.service';
     template: `
         <h2>Top Courses<h2>
         <ul class="list-group">
-            <li class="list-group-item" *ngFor="let course of courses">{{course.title}}</li>
+            <li class="list-group-item" *ngFor="let course of courses | slice:0:3">{{course.title | uppercase  }}</li>
         </ul>
+
+        <!--
+        <input #r (change)="0" type="text" placeholder="Enter value to reverse"/>
+        {{r.value | reverse}}
+        {{"Something" | reverse}}
+        -->
     `
     // providers: [LogService]
 })
@@ -26,7 +32,8 @@ export class TopCoursesComponent implements OnInit {
        this.courseService.fetchCourses()
         .then(data => {
           console.log(data);
-          this.courses = data.slice(0,3);
+        //   this.courses = data.slice(0,3);
+        this.courses =data;
         })
 
     }

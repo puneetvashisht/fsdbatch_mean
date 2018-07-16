@@ -20,6 +20,11 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/courses', (req, res) =>res.json(courses));
 
+// app.delete('/courses/:id', (req,res)=>{
+//     console.log(req.params.id);
+//     courses.splice(id, 1);
+// })
+
 
 app.post('/courses', (req, res) =>{
     var course = req.body;

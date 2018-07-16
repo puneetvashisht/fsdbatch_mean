@@ -42,5 +42,10 @@
             - {{}} --> Interpolation
             - [] -> Input into the component
             - () -> Event binding
+        Services
+            Dependency Injections - 
+            Hierarchical DI (providers)
+
 
     NodeJS
+        Express web restful api

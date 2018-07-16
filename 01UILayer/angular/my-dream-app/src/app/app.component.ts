@@ -14,6 +14,7 @@ export class AppComponent implements OnInit{
 
   title: string = 'My title';
   courses: Array<Course> = []
+  today : Date = new Date();
 
   logs:Array<string>= []
 

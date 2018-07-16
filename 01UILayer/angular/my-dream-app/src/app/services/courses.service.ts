@@ -7,7 +7,7 @@ export class CoursesService {
     
     constructor(private http: Http) { }
 
-    baseUrl: string = 'http://localhost:3000/courses'
+    baseUrl: string = 'http://localhost:3000/courses/'
 
     fetchCourses(): Promise<any> {
         // return this.http.get(this.baseUrl).toPromise()
@@ -17,6 +17,12 @@ export class CoursesService {
 
     addCourse(course: Course):Promise<any> {
         return this.http.post(this.baseUrl, course).toPromise()
+        .then(res => res.json())  
+    }
+
+    // http://localhost:3000/courses/3
+    deleteCourse(index:number){
+        return this.http.delete(this.baseUrl+ index).toPromise()
         .then(res => res.json())  
     }
 

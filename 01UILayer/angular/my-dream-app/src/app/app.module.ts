@@ -9,10 +9,13 @@ import { TopCoursesComponent } from './components/topcourses.component';
 import { CoursesService } from './services/courses.service';
 import { LogService } from './services/log.service';
 import { AddCourseComponent } from './components/addcourse.component';
+import { ReversePipe } from './pipes/reverse.pipe';
+import { FilterCoursesPipe } from './pipes/filter-courses.pipe';
+
 
 @NgModule({
   declarations: [
-    AppComponent, CardComponent, BadgeComponent, TopCoursesComponent, AddCourseComponent
+    AppComponent, CardComponent, BadgeComponent, TopCoursesComponent, AddCourseComponent, ReversePipe, FilterCoursesPipe
   ],
   imports: [
     BrowserModule, HttpModule
