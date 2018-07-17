@@ -15,6 +15,7 @@ export class AppComponent implements OnInit{
   title: string = 'My title';
   courses: Array<Course> = []
   today : Date = new Date();
+  message: string = ''
 
   logs:Array<string>= []
 
@@ -31,11 +32,18 @@ export class AppComponent implements OnInit{
     .then(data => {
       console.log(data);
       this.courses = data
+   // not here
     })
   }
 
   fetchLogs(){
     this.logs = this.logService.getLogs();
+  }
+
+  handleMessageRecieved(message: string){
+    console.log('In parent component: ', message);
+    this.message = message;
+    //Lets see now... should be working
   }
 
 }

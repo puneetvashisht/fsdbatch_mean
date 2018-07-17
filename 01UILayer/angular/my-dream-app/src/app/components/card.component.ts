@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from '@angular/core';
+import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
 
 @Component({
@@ -12,6 +12,7 @@ export class CardComponent implements OnInit {
     @Input('title') title : string = 'Default'
     @Input('summary') summary : string = 'Default Summary'
     @Input('index') index : number;
+    @Output('messageRecieved') messageRecieved :EventEmitter<string>= new EventEmitter(); 
 
     ngOnInit() { 
 
@@ -19,7 +20,15 @@ export class CardComponent implements OnInit {
 
     deleteCourse(index: number){
         this.courseService.deleteCourse(index)
-        .then(data => console.log(data));
+        .then(data => {
+            // we have a problem now.. 
+            // data comes here... but message to be show in parent component
+            // can you guys suggest me something
+            console.log(data)
+            console.log(data.message);
+            // this.message = data.message
+            this.messageRecieved.emit(data.message)
+        });
     }
 
 }

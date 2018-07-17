@@ -20,11 +20,16 @@ app.get('/', (req, res) => res.send('Hello World!'))
 
 app.get('/courses', (req, res) =>res.json(courses));
 
-// app.delete('/courses/:id', (req,res)=>{
-//     console.log(req.params.id);
-//     courses.splice(id, 1);
-// })
 
+// We focus on delete method first. Let's test using postman
+app.delete('/courses/:id', (req,res)=>{
+    var index = req.params.id
+    console.log(index);
+    courses.splice(index, 1);
+    res.status(200).json({message: "Course is Deleted!!"})
+})
+
+//
 
 app.post('/courses', (req, res) =>{
     var course = req.body;
