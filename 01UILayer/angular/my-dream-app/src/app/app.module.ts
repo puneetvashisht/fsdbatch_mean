@@ -11,16 +11,17 @@ import { LogService } from './services/log.service';
 import { AddCourseComponent } from './components/addcourse.component';
 import { ReversePipe } from './pipes/reverse.pipe';
 import { FilterCoursesPipe } from './pipes/filter-courses.pipe';
-
+import { StorageServiceModule } from 'angular-webstorage-service';
+import { LocalCoursesService } from './services/localcourses.service';
 
 @NgModule({
   declarations: [
     AppComponent, CardComponent, BadgeComponent, TopCoursesComponent, AddCourseComponent, ReversePipe, FilterCoursesPipe
   ],
   imports: [
-    BrowserModule, HttpModule
+    BrowserModule, HttpModule, StorageServiceModule
   ],
-  providers: [CoursesService, LogService],
+  providers: [CoursesService, LogService, LocalCoursesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

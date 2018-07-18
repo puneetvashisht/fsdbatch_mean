@@ -1,5 +1,6 @@
 import { Component, OnInit, Input, Output,EventEmitter } from '@angular/core';
 import { CoursesService } from '../services/courses.service';
+import { LocalCoursesService } from '../services/localcourses.service';
 
 @Component({
     selector: 'app-card',
@@ -7,7 +8,7 @@ import { CoursesService } from '../services/courses.service';
 })
 export class CardComponent implements OnInit {
 
-    constructor(private courseService: CoursesService) { }
+    constructor(private courseService: CoursesService, private localCourseService: LocalCoursesService) { }
 
     @Input('title') title : string = 'Default'
     @Input('summary') summary : string = 'Default Summary'
@@ -19,7 +20,7 @@ export class CardComponent implements OnInit {
     }
 
     deleteCourse(index: number){
-        this.courseService.deleteCourse(index)
+        this.localCourseService.deleteCourse(index)
         .then(data => {
             // we have a problem now.. 
             // data comes here... but message to be show in parent component

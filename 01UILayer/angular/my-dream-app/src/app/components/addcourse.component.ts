@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Course } from '../course';
 import { CoursesService } from '../services/courses.service';
+import { LocalCoursesService } from '../services/localcourses.service';
 
 @Component({
     selector: 'add-course',
@@ -31,7 +32,7 @@ export class AddCourseComponent implements OnInit {
 
     message: string = ''
 
-    constructor(private courseService: CoursesService) { }
+    constructor(private courseService: CoursesService, private localCourseService: LocalCoursesService) { }
 
     ngOnInit() {
 
@@ -42,7 +43,12 @@ export class AddCourseComponent implements OnInit {
         // create object of course and do http call
         let course = new Course(title, summary);
 
-        this.courseService.addCourse(course)
+        // this.courseService.addCourse(course)
+        // .then(data=>{
+        //     console.log(data)
+        //     this.message = data.message;
+        // });
+        this.localCourseService.addCourse(course)
         .then(data=>{
             console.log(data)
             this.message = data.message;

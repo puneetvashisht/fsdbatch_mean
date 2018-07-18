@@ -3,6 +3,7 @@ import { Http } from '../../../node_modules/@angular/http';
 import { Course } from '../course';
 import { CoursesService } from '../services/courses.service';
 import { LogService } from '../services/log.service';
+import { LocalCoursesService } from '../services/localcourses.service';
 
 @Component({
     selector: 'app-topcourses',
@@ -24,12 +25,12 @@ export class TopCoursesComponent implements OnInit {
 
     courses: Array<Course> = []
 
-    constructor(private http: Http,  private courseService: CoursesService, private logService: LogService) { }
+    constructor(private http: Http,  private localCourseService: LocalCoursesService, private logService: LogService) { }
 
     ngOnInit() { 
        this.logService.addLog('In Init method of Top Courses')
 
-       this.courseService.fetchCourses()
+       this.localCourseService.fetchCourses()
         .then(data => {
           console.log(data);
         //   this.courses = data.slice(0,3);
