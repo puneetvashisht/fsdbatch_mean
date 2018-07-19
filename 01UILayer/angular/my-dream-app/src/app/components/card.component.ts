@@ -26,7 +26,7 @@ export class CardComponent implements OnInit {
             // data comes here... but message to be show in parent component
             // can you guys suggest me something
             console.log(data)
-            console.log(data.message);
+            // console.log(data.message);
             // this.message = data.message
             this.messageRecieved.emit(data.message)
         });

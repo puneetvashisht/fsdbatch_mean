@@ -3,6 +3,8 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class LogService {
 
+    localFlag: true;
+
     logs: Array<string> = []
     
     constructor() { }
