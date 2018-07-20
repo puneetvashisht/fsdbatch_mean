@@ -1,3 +1,43 @@
-<p>
-  view-courses works!
-</p>
+
+<h2>View Courses - {{today | date:'y/MMM/d - HH:mm:ss a'}}</h2>
+<div *ngIf="message != ''" class="alert alert-success" role="alert">
+    {{message}}
+</div>
+<div class="container">
+
+
+    <div class="row">
+            <div class="input-group mb-3">
+                    <div class="input-group-prepend">
+                        <span class="input-group-text" id="basic-addon1">Search By Course Title</span>
+                    </div>
+                    <input #title (keyup)="0" type="text" class="form-control" placeholder="Enter course title" aria-label="Username" aria-describedby="basic-addon1">
+                    </div>
+
+            </div>
+    <div class="row">
+            <div class="col-8 col-md-8">
+                <div class="row">
+                        <app-card *ngFor="let course of courses | filterCourses:title.value; let i = index" [title]="course.title" [summary]="course.summary" [index]="i" (messageRecieved)="handleMessageRecieved($event)"></app-card>
+                </div>
+                
+            </div>
+            <div class="col-4 col-md-4">
+                <app-topcourses></app-topcourses>
+            </div>
+           
+    </div>
+
+    <div class="row">
+        <button (click)="fetchLogs()">Fetch Logs</button>
+        <ul>
+            <li  *ngFor="let log of logs">
+                {{log}}
+            </li>
+        </ul>
+    </div>
+
+ 
+</div>
+
+
