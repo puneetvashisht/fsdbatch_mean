@@ -1,5 +1,5 @@
 
-function pausecomp(millis)
+function sleep(millis)
 {
     var date = new Date();
     var curDate = null;
@@ -11,14 +11,15 @@ function pausecomp(millis)
 
 console.log('starting')
 
-function readFile(){
-    pausecomp(2000)
-    console.log('Read the file')
-    return "abcd"
-}
-setTimeout(function(){
-    // readFile();
-}, 0)
+// function readFile(){
+//     sleep(5000)
+//     console.log('Read the file')
+//     return "abcd"
+// }
+// readFile();
+
+
+// console.log('finishing')
 
 
 
