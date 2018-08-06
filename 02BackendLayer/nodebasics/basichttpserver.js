@@ -8,6 +8,10 @@ console.log(config.port)
 var server = http.createServer((req, res)=> {
     console.log(req.method)
     console.log(req.url);
+    var contentType = 'text/html'
+    if (req.url.endsWith('.json')) {
+        contentType = 'application/json'
+    }
 
     fs.readFile('files'+ req.url, (err, data)=>{
         console.log('Contents: ' + data);
@@ -17,7 +21,7 @@ var server = http.createServer((req, res)=> {
         }
         else{
             console.log('******test*****')
-            res.writeHead(200,{'Content-type':'text/html'});
+            res.writeHead(200,{'Content-type':contentType});
             // res.writeHead()
             res.write(''+ data);
             res.end();
