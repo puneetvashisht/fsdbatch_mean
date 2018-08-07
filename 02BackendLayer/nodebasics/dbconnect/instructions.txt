@@ -1,0 +1,19 @@
+Install dependencies
+1. npm init -> package.json
+2. npm install <package_name>
+
+Mongodb installation steps
+1. https://www.mongodb.com/download-center#community
+2. mongod --dbpath <dir_name>
+Started on port 27017
+3. npm install mongodb
+4. Write .js file to connect and do operations
+5. Mongo booster or RoboMongo -> UI interfaces for db
+
+References
+https://docs.mongodb.com/manual/reference/mongo-shell/
+https://docs.mongodb.com/manual/reference/sql-comparison/
+
+
+
+
