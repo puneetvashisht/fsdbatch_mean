@@ -27,7 +27,7 @@ function addCategory(category, callback){
         const collection = db.collection('categories');
         collection.insertOne(category, (err, docs)=>{
             if(err) callback(err, null);
-            callback(null, {"message": "Successfully inserted category" + category })
+            callback(null, {"message": "Successfully inserted category!!" + category })
         })
     });
 }
