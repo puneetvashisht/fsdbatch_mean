@@ -1,9 +1,12 @@
 const express = require('express')
 const app = express();
 const bodyParser = require('body-parser')
+// const cors = require('cors')
 const repo = require('./repos/category');
 // const categories = [{ name: "Running" }]
 
+app.use(express.static('files'))
+// app.use(cors());
 // parse application/x-www-form-urlencoded
 app.use(bodyParser.urlencoded({ extended: false }))
  
