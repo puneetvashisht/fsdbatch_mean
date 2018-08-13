@@ -28,7 +28,7 @@ export class CardComponent implements OnInit {
             console.log(data)
             // console.log(data.message);
             // this.message = data.message
-            this.messageRecieved.emit(data.message)
+            // this.messageRecieved.emit(data.message)
         });
     }
 
