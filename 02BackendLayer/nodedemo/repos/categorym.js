@@ -10,7 +10,7 @@ function addCategory(category, callback){
                 callback(err, null);
             }
             else{
-                callback(null, {"message": "Successfully inserted category!!" + category });
+                callback(null, {"message": "Successfully inserted category!!" });
             }
            
         })

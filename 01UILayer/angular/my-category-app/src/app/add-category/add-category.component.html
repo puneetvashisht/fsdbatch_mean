@@ -1,3 +1,15 @@
 <p>
   add-category works!
 </p>
+
+<div *ngIf="message!=''" class="alert alert-success" role="alert">
+  {{message}}
+</div>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon1">Category Name</span>
+  </div>
+  <input type="text" #cname (change)="0" class="form-control" placeholder="Category Name" aria-label="Username" aria-describedby="basic-addon1">
+</div>
+<button type="button" (click)="addCategory(cname.value)" class="btn btn-primary">Add Category</button>
