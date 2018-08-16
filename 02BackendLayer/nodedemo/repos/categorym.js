@@ -6,12 +6,14 @@ mongoose.connect('mongodb://localhost/workout');
 function addCategory(category, callback){
         var cm = new Category(category);
         cm.save((err, docs)=>{
-            if(err){
-                callback(err, null);
-            }
-            else{
-                callback(null, {"message": "Successfully inserted category!!" });
-            }
+            if(err) throw err;
+            callback(null, {"message": "Successfully inserted category!!" });
+            // if(err){
+            //     // callback(err, null);
+            // }
+            // else{
+            //     callback(null, {"message": "Successfully inserted category!!" });
+            // }
            
         })
 }
