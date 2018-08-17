@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>Socket Test</title>
+</head>
+<body>
+<p><a id='hello' href="#" onclick='socket.send("Hello")'>publish Hello</a></p>
+<p><a id='welcome' href="#" onclick='socket.send("Welcome")'>publish Welcome</a></p>
+
+<script src="dist/socket.io.dev.js"></script>
+<script type="text/javascript">
+    // Start the socket
+    
+    var socket = io('http://localhost:3000');
+    socket.on('connect', function(){
+        console.log('connected!!')
+    });
+
+    socket.on('message', function(msg){
+        console.log(msg);
+    });
+</script>
+</body>
+</html>
