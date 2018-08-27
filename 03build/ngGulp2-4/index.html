@@ -1,0 +1,55 @@
+<!--
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Angular QuickStart</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+
+    <script src="node_modules/core-js/client/shim.min.js"></script>
+
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script>
+
+    <script src="systemjs.config.js"></script>
+    <script>
+      System.import('app').catch(function(err){ console.error(err); });
+    </script>
+  </head>
+
+  <body>
+    <my-app>Loading AppComponent content here ...</my-app>
+  </body>
+</html>
+-->
+
+<html>
+
+<head>
+	<base href="/">
+	<title>Angular2 Gulp Tutorial</title>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	
+	<!-- 1. Load libraries -->
+	<!-- Polyfill for older browsers -->
+	<script src="build/lib/core-js/client/shim.min.js"></script>
+	<script src="build/lib/zone.js/dist/zone.js"></script>
+	<script src="build/lib/reflect-metadata/Reflect.js"></script>
+	<script src="build/lib/systemjs/dist/system.src.js"></script>
+
+	<!-- 2. Configure SystemJS -->
+	<script src="build/systemjs.config.js"></script>
+	<script>
+		System.import('app').catch(function(err) {
+			console.error(err);
+		});
+	</script>
+</head>
+
+<body>
+<!-- 3. Display the application -->
+	<my-app>Loading...</my-app>
+</body>
+</html>
