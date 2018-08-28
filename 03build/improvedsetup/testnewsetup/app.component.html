@@ -1,0 +1,40 @@
+<div>
+    Component HTML using template url
+
+    <p>{{someValue | async }}</p>
+
+    <p><button (click)="loadData()">Load Countries Data -- changed</button></p>
+
+    <p>
+        <input type="text" #country (blur)="0" />
+        <button (click)="addCountry(country.value)">ADD Country</button></p>
+
+
+    <p>{{name | uppercase}}</p>
+    <p>{{today| date:'medium'}}</p>
+    <p>{{today| date:'d-M-y : H:m:ss.sss -a'}}</p>
+
+    <p>{{name | reverse}}</p>
+
+
+    <p>{{countries | limit:2}}</p>-->
+
+    <button (click)="toggleShow()" class="btn btn-default" type="submit">{{caption}}</button>
+
+
+
+    <button (click)="deleteCountry(0)" class="btn btn-default">Delete First</button>
+
+    <ul class="list-group" *ngIf="show">
+        <my-listitem *ngFor="let country of countries" [text]="country" (captionSelected)="handleCaptionSelected($event)"></my-listitem>
+
+    </ul>
+
+    <hr/>
+
+    <my-compone></my-compone>
+    <hr/>
+    <my-comptwo></my-comptwo>
+
+
+</div>
